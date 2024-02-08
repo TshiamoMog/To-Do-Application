@@ -1,7 +1,7 @@
 :root{
-    --primary: rgba(234, 64, 163, 0.301);
+    --primary: #ea40a4;
     --business: #3a82ee;
-    --personal: #ea40a4;
+    --personal: var(--primary);
     --light: #eee;
     --grey: #888;
     --dark: #313154;
@@ -35,14 +35,11 @@ body {
 }
 
 section {
-    width: 50%;
-    margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
-
 
 h3 {
     color: var(--dark);
@@ -52,7 +49,7 @@ h3 {
 }
 
 h4 {
-    color: var(--dark);
+    color: var(--grey);
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -74,36 +71,6 @@ h4 {
     color: var(--dark);
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-.create-todo {
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: var(--primary);
-    backdrop-filter: blur(40px);
-}
-
-.greeting::before {
-    content: '';
-    width: 200px;
-    height: 200px;
-    background: var(--business);
-    border-radius: 1rem;
-    position: absolute;
-    left: 20%;
-    top: 9%;
-    z-index: -1;
-}
-.greeting::after {
-    content: '';
-    width: 210px;
-    height: 210px;
-    background: #ea40a4;
-    border-radius: 50%;
-    position: absolute;
-    right: 19%;
-    bottom: 35%;
-    z-index: -1;
 }
 
 .create-todo input[type="text"] {
@@ -203,12 +170,6 @@ input:checked ~ .bubble::after {
     opacity: 0.75;
 }
 
-.todo-list {
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background:  linear-gradient(45deg, var(--light), var(--primary), var(--personal));
-}
-
 .todo-list .list {
     margin: 1rem 0;
 }
@@ -259,7 +220,7 @@ input:checked ~ .bubble::after {
 
 .todo-item .actions .edit {
     margin-right: 0.5rem;
-    background-color: var(--personal);
+    background-color: var(--primary);
 }
 
 .todo-item .actions .delete {
