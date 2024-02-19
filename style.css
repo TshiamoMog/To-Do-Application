@@ -81,7 +81,8 @@ h4 {
     padding: 1.5rem;
     border-radius: 0.5rem;
     background: var(--primary);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(35px);
+    background: transparent;
 }
 
 .greeting::before {
